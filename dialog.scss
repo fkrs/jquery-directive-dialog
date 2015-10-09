@@ -1,0 +1,38 @@
+.dialog {
+  box-shadow: 0 0 0 9999px rgba(0,0,0,0.7);
+  
+  position: fixed;
+  z-index: 1;
+
+  width: 600px;
+  left: 50%;
+  top: 5em;
+  margin-left: -300px;
+
+  background-color: white;
+  padding: 2em;
+  
+  display: none;
+  opacity: 0;
+  
+  transition: all .3s ease;
+  transform: translateZ(0);
+  
+  &.dialog--block {
+    display: block;
+  }
+  
+  &.dialog--visible {
+    opacity: 1;
+  }
+  
+  &.dialog--slide-top {
+    top: 0;
+    opacity: 0;
+    
+    &.dialog--visible {
+      top: 5em;
+      opacity: 1;
+    }
+  }
+}
